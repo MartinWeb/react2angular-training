@@ -1,0 +1,22 @@
+{
+  "name": "angular-phonecat",
+  "private": true,
+  "version": "0.0.0",
+  "description": "A tutorial application for AngularJS",
+  "repository": "https://github.com/angular/angular-phonecat",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.8.x"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "http-server": "^0.11.1",
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "postinstall": "npm run copy-libs",
+    "copy-libs": "cpx \"node_modules/angular/**/*\" app/lib -C",
+    "prestart": "npm install",
+    "start": "http-server ./app -a localhost -p 8000 -c-1"
+  }
+}
