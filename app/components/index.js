@@ -1,1 +1,0 @@
-angular.module('react2angularTraining.components', [])

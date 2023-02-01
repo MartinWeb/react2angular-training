@@ -1,1 +1,0 @@
-angular.module('reactToAngularTraining', ['react2angularTraining.components']);

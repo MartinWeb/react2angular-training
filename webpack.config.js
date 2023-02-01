@@ -1,51 +1,67 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackBar = require('webpackbar');
 
 const config = {
-  entry: './src/index.js',
+  entry: './app/app',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].[contenthash].bundle.js'
+  },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+        cacheGroups: {
+            vendors: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendors',
+                chunks: 'all',
+            },
+        },
+    },
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    modules: [path.resolve((__dirname, 'node_modules')), path.resolve((__dirname, './app'))],
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        use: 'babel-loader',
-        exclude: /node_modules/
+        use: 'ts-loader',
+        exclude: [/node_modules/]
       },
       {
-        test: /\.css$/,
+        test: /\.ts(x?)$/,
+        use: 'ts-loader',
+        exclude: [/node_modules/],
+      },
+      {
+        test: /\.html$/,
+        include: [path.resolve(__dirname, 'app')],
         use: [
-          'style-loader',
-          'css-loader'
-        ]
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
-      },
-      {
-        test: /\.png$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              mimetype: 'image/png'
-            }
-          }
-        ]
-      },
-      {
-        test: /\.svg$/,
-        use: 'file-loader'
-      }
+            {
+                loader: 'html-loader',
+                options: {
+                    minimize: true,
+                },
+            },
+        ],
+    },
     ]
-  }
+  },
+  plugins: [
+    // new ESLintPlugin({
+    //     files: ['./app/**/*.ts'],
+    // }),
+    new HtmlWebpackPlugin({
+        template: 'app/index.html',
+        filename: 'index.html',
+    }),
+    new WebpackBar(),
+],
+  mode:'production'
 };
 
 module.exports = config;
