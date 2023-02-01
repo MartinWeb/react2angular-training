@@ -1,10 +1,10 @@
 import angular from "angular";
+import { AlertComponent } from "./Alert/Alert.component";
 import { HomeComponent } from "./Home/home.component";
-import { HeaderComponent } from "./Layout/Header/Header.component";
 
 const ComponentsModule = angular.module('training.components', [])
     .component('homeComponent', HomeComponent)
-    .component('headerComponent', HeaderComponent);
+    .component('alertComponent', AlertComponent);
 
 const moduleName = ComponentsModule.name;
 

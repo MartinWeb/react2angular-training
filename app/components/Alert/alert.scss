@@ -1,0 +1,18 @@
+.alert {
+    padding: 5px 10px;
+    margin: 10px 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.info {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.warning {
+    background-color: rgb(241, 90, 36);
+    color: white;
+}
