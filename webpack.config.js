@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackBar = require('webpackbar');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   entry: './app/app',
@@ -48,17 +49,37 @@ const config = {
                 },
             },
         ],
-    },
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+            filename: 'img/[name][ext][query]',
+        },
+      },
+      {
+        test: /\.scss/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            {
+                loader: 'sass-loader',
+                options: {
+                    implementation: require('sass'),
+                },
+            },
+        ],
+      },
     ]
   },
   plugins: [
-    // new ESLintPlugin({
-    //     files: ['./app/**/*.ts'],
-    // }),
     new HtmlWebpackPlugin({
         template: 'app/index.html',
         filename: 'index.html',
     }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].bundle.min.css',
+  }),
     new WebpackBar(),
 ],
   mode:'production'
