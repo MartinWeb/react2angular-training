@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`footerComponent should have valid snapshot 1`] = `
+"<footer>
+    Chuck Norris ©
+</footer>"
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlertComponent should have correct bindings 1`] = `
+{
+  "title": "@",
+  "type": "@",
+}
+`;
+
+exports[`AlertComponent should have valid snapshot 1`] = `
+"<div class="alert {{$ctrl.type}}" ng-if="$ctrl.isVisible" ng-click="$ctrl.isVisible = !$ctrl.isVisible">
+    <p>{{$ctrl.title}}</p>
+    <ng-transclude></ng-transclude>
+</div>"
+`;
