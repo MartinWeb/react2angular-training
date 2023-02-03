@@ -8,7 +8,7 @@ import { CategoriesResultComponent } from "./Results/CategoriesResult/Categories
 import { JokeComponent } from "./Results/Joke/Joke.component";
 import { RandomResultComponent } from "./Results/RandomResult/RandomResult.component";
 import { SearchResultComponent } from "./Results/SearchResult/SearchResult.component";
-import { WarningComponent } from "./Warning/Warning.component";
+import { WarningComponent } from "./Warning";
 
 const ComponentsModule = angular.module('training.components', [ServiceModule])
     .component('homeComponent', HomeComponent)
