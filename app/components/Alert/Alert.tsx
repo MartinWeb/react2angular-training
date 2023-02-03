@@ -7,7 +7,7 @@ export interface AlertProps {
   children?: ReactNode;
 }
 
-const Alert = ({ title, type, children }: AlertProps) => {
+export const Alert = ({ title, type, children }: AlertProps) => {
     const [isVisible, setIsVisible] = useState(true);
 
     return (
@@ -22,5 +22,3 @@ const Alert = ({ title, type, children }: AlertProps) => {
         </>
     );
 };
-
-export { Alert };

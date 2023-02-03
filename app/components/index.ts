@@ -5,7 +5,7 @@ import { ChoiceComponent } from "./Choice/Choice.component";
 import { HomeComponent } from "./Home/home.component";
 import { ReloadButtonComponent } from "./ReloadButton/ReloadButton.component";
 import { CategoriesResultComponent } from "./Results/CategoriesResult/CategoriesResult.component";
-import { JokeComponent } from "./Results/Joke/Joke.component";
+import { JokeComponent } from "./Results/Joke";
 import { RandomResultComponent } from "./Results/RandomResult/RandomResult.component";
 import { SearchResultComponent } from "./Results/SearchResult/SearchResult.component";
 import { WarningComponent } from "./Warning";
