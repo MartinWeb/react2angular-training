@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WarningComponent should have valid snapshot 1`] = `
-"<alert-component title="Be careful, Chuck Norris is so strong, even browsing here could destroy you !" type="warning">
-    <p>You have benn warned my friend :D</p>
+"<alert-component title="Be very careful not to mock this website's design !" type="warning">
+    <p>Chuck loves orange and blue, because it's the colour of his beard and his favorite jeans.</p>
 </alert-component>"
 `;

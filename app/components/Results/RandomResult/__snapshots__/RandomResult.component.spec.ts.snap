@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RandomResultComponent should have valid bindings 1`] = `
+{
+  "joke": "=",
+  "onReload": "<",
+}
+`;
+
+exports[`RandomResultComponent should have valid snapshot 1`] = `
+"<div ng-if="$ctrl.joke !== null">
+    <reload-button-component on-reload="$ctrl.onReload" content="Get me another one !" visibility="$ctrl.joke !== null"></reload-button-component>
+
+    <joke-component joke="$ctrl.joke"></joke-component>
+</div>"
+`;

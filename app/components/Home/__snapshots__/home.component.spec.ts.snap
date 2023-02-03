@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeComponent should have valid snapshot 1`] = `
+"<header-component></header-component>
+
+<div id="home">
+    <alert-component title="Chuck Norris welcomes you !" type="info"></alert-component>
+    <warning-component></warning-component>
+
+    <choice-component></choice-component>
+</div>
+
+<footer-component></footer-component>"
+`;

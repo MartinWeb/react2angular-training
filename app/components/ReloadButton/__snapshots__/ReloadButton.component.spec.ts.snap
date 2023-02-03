@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReloadButtonComponent should have valid bindings 1`] = `
+{
+  "content": "@",
+  "onReload": "<",
+  "visibility": "<",
+}
+`;
+
+exports[`ReloadButtonComponent should have valid snapshot 1`] = `"<button ng-click="$ctrl.onReload()" ng-if="$ctrl.visibility">{{$ctrl.content}}</button>"`;

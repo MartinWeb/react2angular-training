@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JokeComponent should have valid bindings 1`] = `
+{
+  "joke": "=",
+}
+`;
+
+exports[`JokeComponent should have valid snapshot 1`] = `"<pre><h3>{{$ctrl.joke.value}}</h3></pre>"`;

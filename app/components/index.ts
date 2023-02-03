@@ -7,7 +7,7 @@ import { ReloadButtonComponent } from "./ReloadButton/ReloadButton.component";
 import { CategoriesResultComponent } from "./Results/CategoriesResult/CategoriesResult.component";
 import { JokeComponent } from "./Results/Joke/Joke.component";
 import { RandomResultComponent } from "./Results/RandomResult/RandomResult.component";
-import { SearchResultComponent } from "./Results/SearchResultComponent/SearchResultComponent.component";
+import { SearchResultComponent } from "./Results/SearchResult/SearchResult.component";
 import { WarningComponent } from "./Warning/Warning.component";
 
 const ComponentsModule = angular.module('training.components', [ServiceModule])

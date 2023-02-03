@@ -15,7 +15,7 @@ const config = { headers: { 'Content-Type': 'application/json' } };
 export class ApiService implements IApiService {
     constructor(private readonly $http: angular.IHttpService) { }
 
-    public baseUrl = 'https://api.chucknorris.io/jokes';
+    private baseUrl = 'https://api.chucknorris.io/jokes';
 
     public getJokesRandomly = async () => {
         const url = this.baseUrl + '/random';

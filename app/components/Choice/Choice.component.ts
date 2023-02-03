@@ -1,5 +1,5 @@
 import angular, { IScope } from "angular";
-import { ApiService } from "services/api.service";
+import { IApiService } from "services/api.service";
 import template from './choice-template.html';
 import './choice.scss';
 
@@ -10,7 +10,7 @@ export class ChoiceController implements angular.IController {
     public jokes: ChuckNorris.Joke[] = null;
     public categories: string[] = null;
 
-    constructor(private readonly apiService: ApiService, private readonly $scope: IScope) {}
+    constructor(private readonly apiService: IApiService, private readonly $scope: IScope) {}
 
     public onSelectChoice = async () => {
         if(this.choice === 'random') {
