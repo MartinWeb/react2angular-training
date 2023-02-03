@@ -1,0 +1,8 @@
+.search-result {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    pre {
+        width: 100%;
+    }
+}

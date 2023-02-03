@@ -1,0 +1,11 @@
+button {
+    padding: 10px;
+    border-radius: 0;
+    background-color: rgb(241, 90, 36);
+    color: white;
+    border: 1px solid rgb(241, 90, 36);
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,9 +1,16 @@
 .alert {
     padding: 5px 10px;
     margin: 10px 0;
+    position: relative;
 
-    &:hover {
-        cursor: pointer;
+    .close {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 

@@ -1,0 +1,14 @@
+<p>Chuck Norris propose you the following categories :</p>
+
+<form>
+    <label for="{{cat}}" ng-repeat="cat in $ctrl.categories" class="categories_radio">
+        <input type="radio" id="{{cat}}" name="category" value="{{cat}}" ng-model="$ctrl.category" ng-change="$ctrl.onSelectCategory()">
+        {{cat}}
+    </label>
+</form>
+
+<reload-button-component on-reload="$ctrl.onSelectCategory" content="Get me another one !" visibility="$ctrl.joke !== null"></reload-button-component>
+
+<div ng-if="$ctrl.category !== null && $ctrl.joke !== null">
+    <joke-component joke="$ctrl.joke"></joke-component>
+</div>

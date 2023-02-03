@@ -1,0 +1,42 @@
+<div class="choice">
+    <h4>Chuck Norris is full of knowledge, but what would you like to do now ? Which way do you want to interrogate Chuck ?</h4>
+
+    <form>
+        <label for="random" class="choice_radio">
+            <input type="radio" id="random" name="choice" value="random" ng-model="$ctrl.choice" ng-change="$ctrl.onSelectChoice()">
+            Randomly
+        </label>
+        
+        <label for="categories" class="choice_radio">
+            <input type="radio" id="categories" name="choice" value="categories" ng-model="$ctrl.choice" ng-change="$ctrl.onSelectChoice()">
+            Show me some categories
+        </label>
+
+        <label for="search" class="choice_radio">
+            <input type="radio" id="search" name="choice" value="search" ng-model="$ctrl.choice" ng-change="$ctrl.onSelectChoice()">
+            I want to search a particular word
+        </label>
+    </form>
+
+    <div class="result">
+        <div ng-if="$ctrl.choice === 'search'">
+            <p>Type the word you want Chuck Norris to tell you about :</p>
+            <form>
+                <input type="text" ng-model="$ctrl.search" />
+                <input type="submit" value="Search" ng-click="$ctrl.onSearch()" />
+            </form>
+    
+            <div ng-if="$ctrl.search !== null && $ctrl.jokes !== null">
+                <search-result-component jokes="$ctrl.jokes"></search-result-component>
+            </div> 
+        </div>
+    
+        <div ng-if="$ctrl.choice === 'random' && $ctrl.joke !== null">
+            <random-result-component joke="$ctrl.joke" on-reload="$ctrl.onSelectChoice"></random-result-component>
+        </div> 
+    
+        <div ng-if="$ctrl.choice === 'categories' && $ctrl.categories !== null">
+            <categories-result-component categories="$ctrl.categories"></categories-result-component>
+        </div> 
+    </div>
+</div>

@@ -2,6 +2,6 @@
 
 exports[`footerComponent should have valid snapshot 1`] = `
 "<footer>
-    Chuck Norris ©
+    Chuck Norris © {{$ctrl.date | date:"d/MM/yyyy"}}
 </footer>"
 `;

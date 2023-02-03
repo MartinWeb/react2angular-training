@@ -1,0 +1,16 @@
+form {
+    margin-bottom: 10px;
+
+    .categories_radio {
+        background-color: rgb(241, 90, 36);
+        color: white;
+        padding: 10px;
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &:hover, & > input[type=radio], & > label {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,4 +1,5 @@
-<div class="alert {{$ctrl.type}}" ng-if="$ctrl.isVisible" ng-click="$ctrl.isVisible = !$ctrl.isVisible">
-    <p>{{$ctrl.title}}</p>
+<div class="alert {{$ctrl.type}}" ng-if="$ctrl.isVisible">
+    <h4>{{$ctrl.title}}</h4>
+    <span class="close" ng-click="$ctrl.isVisible = !$ctrl.isVisible">X</span>
     <ng-transclude></ng-transclude>
 </div>
