@@ -5,9 +5,16 @@
   "description": "A react2angular training application",
   "license": "MIT",
   "dependencies": {
-    "angular": "1.8.x"
+    "angular": "1.8.x",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react2angular": "^4.0.6"
   },
   "devDependencies": {
+    "@testing-library/dom": "^8.20.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/angular": "^1.8.4",
     "@types/jest": "^29.4.0",
     "cpx": "^1.5.0",
