@@ -25,7 +25,7 @@ module.exports = {
         'app/**/*.(js|jsx|ts|tsx)',
         '!app/**/*.spec.(js|jsx|ts|tsx)',
         '!app/**/*.html',
-        '!app/**/index.ts',
+        '!app/**/index.(ts|tsx)',
         '!app/app.ts',
         '!app/@types/*'
     ],

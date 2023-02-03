@@ -5,5 +5,5 @@ export type JokeProps = {
 }
 
 export const Joke = ({ joke }: JokeProps) => (
-    <pre><h3>{joke?.value}</h3></pre>
+    <pre><h3>{joke.value}</h3></pre>
 );
