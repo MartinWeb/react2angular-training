@@ -7,7 +7,7 @@
     </label>
 </form>
 
-<reload-button-component on-reload="$ctrl.onSelectCategory" content="Get me another one !" visibility="$ctrl.joke !== null"></reload-button-component>
+<reload-button-component on-reload="$ctrl.onSelectCategory" content="'Get me another one !'" visibility="$ctrl.joke !== null"></reload-button-component>
 
 <div ng-if="$ctrl.category !== null && $ctrl.joke !== null">
     <joke-component joke="$ctrl.joke"></joke-component>
